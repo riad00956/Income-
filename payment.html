@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment | Income Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Income<span>Portal</span></div>
+            <a href="dashboard.html" class="back-btn">← Back</a>
+        </header>
+
+        <div class="card">
+            <div class="card-header">Payment Methods</div>
+            <div class="payment-methods">
+                <div class="payment-method active" data-method="bkash">
+                    <div class="method-logo">bKash</div>
+                    <div class="method-number">01965064030</div>
+                </div>
+                <div class="payment-method" data-method="nagad">
+                    <div class="method-logo">Nagad</div>
+                    <div class="method-number">01965064030</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Send Payment</div>
+            <form id="paymentForm">
+                <div class="form-group">
+                    <label for="paymentMethod">Payment Method</label>
+                    <select id="paymentMethod" required>
+                        <option value="bkash">bKash</option>
+                        <option value="nagad">Nagad</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount (BDT)</label>
+                    <input type="number" id="amount" min="10" required>
+                </div>
+                <div class="form-group">
+                    <label for="transactionId">Transaction ID</label>
+                    <input type="text" id="transactionId" required>
+                </div>
+                <button type="submit" class="btn">Submit Payment</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/payment.js"></script>
+</body>
+</html>
